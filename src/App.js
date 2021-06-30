@@ -30,11 +30,11 @@ function App() {
         setLoading(false);
 
         if (res.status === 200) {
-          dispatch({ type: "UPDATEDDATA", data: res.data });
-          setTotalConfirmed(state.data.Global.TotalConfirmed);
-          setTotalRecovered(state.data.Global.NewRecovered);
-          setTotalDeaths(state.data.Global.TotalDeaths);
-          setCovidSummary(state.data);
+          dispatch({type:"UPDATEDDATA",data:res.data})
+          setTotalConfirmed(state.data ? state.data.Global.TotalConfirmed : res.data.Global.TotalConfirmed);
+          setTotalRecovered(state.data ? state.data.Global.NewRecovered : res.data.Global.NewRecovered);
+          setTotalDeaths(state.data ? state.data.Global.TotalDeaths : res.data.Global.TotalDeaths);
+          setCovidSummary(state.data ? state.data : res.data);
         }
         console.log(res);
       })

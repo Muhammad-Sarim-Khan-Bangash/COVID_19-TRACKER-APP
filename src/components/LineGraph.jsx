@@ -4,8 +4,9 @@ const LineGraph = (props) => {
   return (
     <div
       style={{
-        width: "600px",
-        height: "600px",
+        maxWidth: "600px",
+        minWidth: "300px",
+        height: "800px",
         margin: "50px auto",
       }}
     >

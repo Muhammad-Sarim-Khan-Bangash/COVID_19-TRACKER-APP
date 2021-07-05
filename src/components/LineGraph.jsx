@@ -19,7 +19,7 @@ const LineGraph = (props) => {
               fill: true,
               lineTension: 0.1,
               backgroundColor: "rgba(75,192,192,0.4)",
-              borderColor: "red",
+              borderColor: "#ff4757",
               borderCapStyle: "butt",
               borderDash: [],
               borderDashOffset: 0.0,
